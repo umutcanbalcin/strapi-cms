@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "likes",
+  "info": {
+    "singularName": "like",
+    "pluralName": "likes",
+    "displayName": "Like",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "commentId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::comment.comment",
+      "inversedBy": "likes"
+    },
+    "userId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::kindeuser.kindeuser",
+      "inversedBy": "likes"
+    },
+    "videoId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::video.video",
+      "inversedBy": "likes"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "like",
+        "unlike"
+      ]
+    }
+  }
+}

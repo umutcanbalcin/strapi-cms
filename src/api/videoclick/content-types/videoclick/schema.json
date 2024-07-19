@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videoclicks",
+  "info": {
+    "singularName": "videoclick",
+    "pluralName": "videoclicks",
+    "displayName": "videoClick"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cookieId": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::kindeuser.kindeuser",
+      "inversedBy": "videoclicks"
+    },
+    "videoId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::video.video",
+      "inversedBy": "videoclicks"
+    }
+  }
+}

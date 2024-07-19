@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kindeusers",
+  "info": {
+    "singularName": "kindeuser",
+    "pluralName": "kindeusers",
+    "displayName": "KindeUser",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "email": {
+      "type": "email",
+      "unique": true,
+      "required": true
+    },
+    "profilePicture": {
+      "type": "string"
+    },
+    "videos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::video.video",
+      "mappedBy": "userId"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "userId"
+    },
+    "likes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::like.like",
+      "mappedBy": "userId"
+    },
+    "videoclicks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::videoclick.videoclick",
+      "mappedBy": "userId"
+    }
+  }
+}
