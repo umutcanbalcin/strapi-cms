@@ -11,24 +11,4 @@ services:
       name: strapi-data
       mountPath: /data
       sizeGB: 1
-    envVars:
-      - key: NODE_VERSION
-        value: ~20.11.0  # Node.js sürümünü güncelledim
-      - key: NODE_ENV
-        value: production
-      - key: DATABASE_CLIENT
-        value: sqlite
-      - key: DATABASE_FILENAME
-        value: /data/strapi.db
-      - key: JWT_SECRET
-        value: waV4raQOp1Wopb7Mb8lwyg==  # Özgün JWT_SECRET
-      - key: ADMIN_JWT_SECRET
-        value: EP3FoJXb7Z4P0WZsT1Tr0A==  # Özgün ADMIN_JWT_SECRET
-      - key: APP_KEYS
-        value: qtlbwA3ojAq8XGhME+jiVQ==,jxdI4rjUN6rZ7sMRq1O95Q==,c+x8dKY0TH+g4hd4QizqJQ==,Dh3xa9cekog8jTjVBcbVYw==  # Özgün APP_KEYS
-      - key: API_TOKEN_SALT
-        value: GB5ndBWilyuqtFWJt8Yx6g==
-      - key: TRANSFER_TOKEN_SALT
-        value: 6KIB3pQ4hUORc3rO4MxLgg==
-      - key: PORT
-        value: "1337"  # Port ayarı
+    envVars: []  # Burayı boş bırakabilirsiniz, .env dosyası kullanılacak
