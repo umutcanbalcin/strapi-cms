@@ -4,7 +4,7 @@ services:
     env: node
     plan: starter
     buildCommand: npm install && npm run build
-    startCommand: mkdir -p /data/public && rsync -a .public/ /data/public/ && npm start
+    startCommand: mkdir -p /data/public && rsync -a ./public/ /data/public/ && npm start
     healthCheckPath: /_health
     autoDeploy: false
     disk:
@@ -16,11 +16,19 @@ services:
         value: ~20.11.0  # Node.js sürümünü güncelledim
       - key: NODE_ENV
         value: production
+      - key: DATABASE_CLIENT
+        value: sqlite
       - key: DATABASE_FILENAME
         value: /data/strapi.db
       - key: JWT_SECRET
-        generateValue: true
+        value: waV4raQOp1Wopb7Mb8lwyg==  # Özgün JWT_SECRET
       - key: ADMIN_JWT_SECRET
-        generateValue: true
+        value: EP3FoJXb7Z4P0WZsT1Tr0A==  # Özgün ADMIN_JWT_SECRET
       - key: APP_KEYS
-        generateValue: true
+        value: qtlbwA3ojAq8XGhME+jiVQ==,jxdI4rjUN6rZ7sMRq1O95Q==,c+x8dKY0TH+g4hd4QizqJQ==,Dh3xa9cekog8jTjVBcbVYw==  # Özgün APP_KEYS
+      - key: API_TOKEN_SALT
+        value: GB5ndBWilyuqtFWJt8Yx6g==
+      - key: TRANSFER_TOKEN_SALT
+        value: 6KIB3pQ4hUORc3rO4MxLgg==
+      - key: PORT
+        value: "1337"  # Port ayarı
