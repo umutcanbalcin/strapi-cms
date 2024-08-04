@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "prepare-public": "mkdir -p /data/public && rsync -a public/ /data/public/",
+    "prepare-public": "mkdir -p /app/public && rsync -a public/ /app/public/",
     "build": "strapi build",
-    "start": "npm run prepare-public && strapi start",
+     "start": "strapi start --port 1337",
     "develop": "strapi develop",
     "strapi": "strapi",
     "deploy": "strapi deploy"
