@@ -4,9 +4,10 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
+    "prepare-public": "mkdir -p /data/public && rsync -a public/ /data/public/",
     "build": "strapi build",
+    "start": "strapi start",
+    "develop": "strapi develop",
     "strapi": "strapi",
     "deploy": "strapi deploy"
   },
