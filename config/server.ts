@@ -7,4 +7,5 @@ export default ({ env }) => ({
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
+  url: env('RENDER_EXTERNAL_URL', 'https://strapi-cms-odlu.onrender.com'),
 });
