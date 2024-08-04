@@ -6,7 +6,7 @@
   "scripts": {
     "prepare-public": "mkdir -p /data/public && rsync -a public/ /data/public/",
     "build": "strapi build",
-    "start": "strapi start",
+    "start": "npm run prepare-public && strapi start",
     "develop": "strapi develop",
     "strapi": "strapi",
     "deploy": "strapi deploy"
